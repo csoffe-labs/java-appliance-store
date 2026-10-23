@@ -6,19 +6,21 @@ A Java application for managing a home appliance store, with console and web int
 
 ## Project Structure
 
-src/  
-├── model/        # Domain classes (behaviour + invariants)  
-├── dao/          # Database access and persistence
-├── handlers/     # Web layer (HTML rendering + orchestration)  
-├── console/      # Console menu CRUD  
-└── server/       # HttpServer setup + routing  
+```text
+src/
+├── model/       # Domain classes (behaviour + invariants)
+├── dao/         # Database access and persistence
+├── handlers/    # Web layer (HTML rendering + orchestration)
+├── console/     # Console menu CRUD
+└── server/      # HttpServer setup + routing
+```
 
 ---
 
 ## How to Run
 
 1. Open in a Java IDE (such as Eclipse or IntelliJ IDEA), or compile and run using Java 8 from the command line.
-2. Ensure `homeStore_V2.db` is in the project root  
+2. Ensure `HomeStore_V2.db` is in the project root  
 3. Run either:    
    - **Console version:** Run `StoreConsole`  
    - **Web version:** Run `StoreServer`and then visit http://localhost:8080  
