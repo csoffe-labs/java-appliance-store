@@ -146,9 +146,9 @@ public class OrderDAO {
     }
 
 
-    // ============================================================
-    // Simple lookup methods (unchanged)
-    // ============================================================
+    
+    // Simple lookup methods
+ 
 
     public Optional<Order> findById(int id) {
         String sql = "SELECT * FROM orders WHERE id = ?";
