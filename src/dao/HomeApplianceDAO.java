@@ -45,7 +45,7 @@ public class HomeApplianceDAO {
     }
 
     public List<HomeAppliance> findAll() {
-        String sql = "SELECT * FROM homeappliance ORDER BY brand, model"; // ✔ correct table
+        String sql = "SELECT * FROM homeappliance ORDER BY brand, model"; 
         List<HomeAppliance> results = new ArrayList<>();
 
         try (Connection conn = getConnection();
@@ -65,7 +65,7 @@ public class HomeApplianceDAO {
 
  //Optional use with find by ID
     public Optional<HomeAppliance> findById(int id) {
-        String sql = "SELECT * FROM homeappliance WHERE id=?"; // ✔ corrected
+        String sql = "SELECT * FROM homeappliance WHERE id=?"; 
 
         try (Connection conn = getConnection();
              PreparedStatement ps = conn.prepareStatement(sql)) {
@@ -83,7 +83,7 @@ public class HomeApplianceDAO {
 
     public HomeAppliance insert(HomeAppliance a) {
         String sql = "INSERT INTO homeappliance (sku, brand, model, description, category, price, stockLevel) "
-                   + "VALUES (?, ?, ?, ?, ?, ?, ?)"; // ✔ corrected
+                   + "VALUES (?, ?, ?, ?, ?, ?, ?)"; 
 
         try (Connection conn = getConnection();
              PreparedStatement ps = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
@@ -124,7 +124,7 @@ public class HomeApplianceDAO {
     }
 
     public boolean update(HomeAppliance a) {
-        String sql = "UPDATE homeappliance SET sku=?, brand=?, model=?, description=?, category=?, price=?, stockLevel=? WHERE id=?"; // ✔ corrected
+        String sql = "UPDATE homeappliance SET sku=?, brand=?, model=?, description=?, category=?, price=?, stockLevel=? WHERE id=?"; 
 
         try (Connection conn = getConnection();
              PreparedStatement ps = conn.prepareStatement(sql)) {
@@ -147,7 +147,7 @@ public class HomeApplianceDAO {
 
  
     public boolean delete(int id) {
-        String sql = "DELETE FROM homeappliance WHERE id=?"; // ✔ corrected
+        String sql = "DELETE FROM homeappliance WHERE id=?"; 
 
         try (Connection conn = getConnection();
              PreparedStatement ps = conn.prepareStatement(sql)) {
@@ -162,7 +162,7 @@ public class HomeApplianceDAO {
 
     //stock reduce
     public boolean updateStock(int applianceId, int quantity) {
-        String sql = "UPDATE homeappliance SET stockLevel = stockLevel - ? WHERE id = ? AND stockLevel >= ?"; // ✔ corrected
+        String sql = "UPDATE homeappliance SET stockLevel = stockLevel - ? WHERE id = ? AND stockLevel >= ?"; 
 
         try (Connection conn = getConnection();
              PreparedStatement ps = conn.prepareStatement(sql)) {
