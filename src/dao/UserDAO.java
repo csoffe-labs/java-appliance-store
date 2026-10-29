@@ -9,7 +9,7 @@ import java.util.Optional;
  * DAO for User authentication.
  * Provides simple lookup by username and password.
  * Hash has not been used - proof of concept. 
- * @author 24848776
+ * @author Chloe Soffe
  */
 public class UserDAO {
 
